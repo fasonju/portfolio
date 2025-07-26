@@ -47,3 +47,7 @@ export const SOCIAL_LINKS = {
   LINKEDIN: "https://linkedin.com/in/ren-fu",
   X: "https://twitter.com/fason_ju",
 };
+
+export const EMAILJS_PUBLIC_KEY = process.env.NEXT_PUBLIC_EMAILJS_KEY;
+export const EMAILJS_SERVICE_ID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
+export const EMAILJS_TEMPLATE_ID = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID;

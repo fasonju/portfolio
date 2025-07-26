@@ -5,11 +5,19 @@ import { HiMail, HiUser } from "react-icons/hi";
 import { BsChatTextFill } from "react-icons/bs";
 import Footer from "../components/Footer";
 import { Modal } from "antd";
-import { CONTACTS, SOCIAL_LINKS } from "../constants/constants";
+import {
+  CONTACTS,
+  EMAILJS_SERVICE_ID,
+  EMAILJS_TEMPLATE_ID,
+  SOCIAL_LINKS,
+} from "../constants/constants";
+import { send } from "@emailjs/browser";
 
 const Contact = () => {
   const [isOpen, setIsOpen] = useState(false);
-
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
   return (
     <BannerLayout>
       <div className=" px-4 py-2">
@@ -91,6 +99,7 @@ const Contact = () => {
                     <HiUser />
                   </div>
                   <input
+                    onChange={(e) => setName(e.target.value)}
                     type="text"
                     className="input_stylings"
                     placeholder="Name"
@@ -107,6 +116,7 @@ const Contact = () => {
                     <HiMail />
                   </div>
                   <input
+                    onChange={(e) => setEmail(e.target.value)}
                     type="text"
                     className="input_stylings"
                     placeholder="Email"
@@ -123,6 +133,7 @@ const Contact = () => {
                     <BsChatTextFill />
                   </div>
                   <textarea
+                    onChange={(e) => setMessage(e.target.value)}
                     rows={6}
                     cols={50}
                     className="input_stylings"
@@ -132,7 +143,12 @@ const Contact = () => {
               </div>
 
               <div className="my-4">
-                <button onClick={() => setIsOpen(true)} className="button">
+                <button
+                  onClick={() => {
+                    sendEmail(name, email, message, setIsOpen);
+                  }}
+                  className="button"
+                >
                   {" "}
                   SEND MESSAGE{" "}
                 </button>
@@ -153,19 +169,37 @@ const Contact = () => {
         onCancel={() => setIsOpen(false)}
       >
         <div className="flex flex-col items-center justify-center">
-          <h1 className="text-Green font-bold text-2xl">In Progress</h1>
-          <a
-            className="underline text-Snow"
-            target="_blank"
-            href="https://github.com/osamajavaid/portfolio"
-            rel="noreferrer"
-          >
-            Be the one to integrate this!
-          </a>
+          <h1 className="text-Green font-bold text-2xl">
+            Thank you for reaching out, I will get back to you soon!
+          </h1>
         </div>
       </Modal>
       <Footer />
     </BannerLayout>
+  );
+};
+
+const sendEmail = (name, email, message, setSuccessModalOpen) => {
+  if (!name || !email || !message) {
+    alert("All fields are required.");
+    return;
+  }
+
+  const templateParams = {
+    name: name,
+    email: email,
+    message: message,
+  };
+
+  send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, templateParams).then(
+    (response) => {
+      console.log("email sent", response.status, response.text);
+      setSuccessModalOpen(true);
+    },
+    (error) => {
+      console.error(error);
+      alert("Failed to send email, please reach out manually.");
+    },
   );
 };
 
