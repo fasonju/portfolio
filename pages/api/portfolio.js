@@ -27,7 +27,7 @@ const portfolio = [
     id: 1,
     projectName: "Portfolio",
     url: "https://github.com/fasonju/portfolio",
-    image: "projects/portfolio.png"
+    image: "projects/portfolio.png",
     projectDetail: "This website",
     technologiesUsed: [
       {
