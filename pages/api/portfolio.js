@@ -3,7 +3,7 @@ const portfolio = [
     id: 0,
     projectName: "VisFork",
     url: "https://github.com/visvork-sep/VisFork",
-    image: "https://www.vecteezy.com/free-vector/image-placeholder",
+    image: "projects/visfork.png",
     projectDetail: "Visualization tool for Git fork ecosystems.",
     technologiesUsed: [
       {
@@ -14,6 +14,9 @@ const portfolio = [
       },
       {
         tech: "MySQL",
+      },
+      {
+        tech: "d3",
       },
       {
         tech: "Git",
