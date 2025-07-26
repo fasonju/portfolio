@@ -23,6 +23,24 @@ const portfolio = [
       },
     ],
   },
+  {
+    id: 1,
+    projectName: "Portfolio",
+    url: "https://github.com/fasonju/portfolio",
+    image: "projects/portfolio.png"
+    projectDetail: "This website",
+    technologiesUsed: [
+      {
+        tech: "NextJs"
+      },
+      {
+        tech: "Docker"
+      },
+      {
+        tech: "TailwindCSS"
+      }
+    ]
+  }
 ];
 export default function handler(req, res) {
   res.status(200).json(portfolio);
