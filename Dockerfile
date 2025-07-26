@@ -2,6 +2,10 @@
 
 FROM node:18-alpine AS base
 
+LABEL org.opencontainers.image.source="https://github.com/fasonju/portfolio"
+LABEL org.opencontainers.image.description="Production Portfolio webapp using NEXTJS"
+LABEL org.opencontainers.image.licenses=MIT
+
 # Install dependencies only when needed
 FROM base AS deps
 # Check https://github.com/nodejs/docker-node/tree/b4117f9333da4138b03a546ec926ef50a31506c3#nodealpine to understand why libc6-compat might be needed.
