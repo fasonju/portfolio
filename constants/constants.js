@@ -31,7 +31,7 @@ export const TECH_STACK = [
   "Rust",
   "Rocket.rs",
   "JavaScript",
-  "TypeScript",
+  "TykeScript",
   "Python",
   "SQL",
   "GraphQL",

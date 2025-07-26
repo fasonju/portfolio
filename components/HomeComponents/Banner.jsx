@@ -58,7 +58,7 @@ const Banner = () => {
             </div>
             <div className="w-48 h-52 relative hidden md:block">
               <Image
-                className="absolute top-8 w-full h-full"
+                className="absolute top-8"
                 src="/images/emoji.png"
                 alt="emoji"
                 width={200}
@@ -104,4 +104,3 @@ const Banner = () => {
 };
 
 export default Banner;
-
