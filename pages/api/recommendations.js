@@ -3,7 +3,7 @@ const recommendationCard = [
   {
     id: 0,
     name: "Arman Akçay",
-    image: "images/arman.jpg",
+    image: "images/arman.jpeg",
     designation: "Microsoft consultant at Cloudify",
     view: "Ren Fu has always been extremely sharp and easy to work with when I've collaborated with him on a variety of projects, including AI, system design, and web development. He picks things up really quickly and isn’t afraid to dive into complex problems.  Ren always brings positive energy and insightful perspectives, whether he is coming up with new ideas or delving into technical details. Definitely someone I'd work with again.",
     linkednURL: "https://linkedin.com/in/arman-akçay-a0a10723a",
