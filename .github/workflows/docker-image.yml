@@ -13,8 +13,8 @@ jobs:
         run: |
           docker login --username fasonju --password ${{secrets.GH_PAT}} ghcr.io
           docker build \
-            --build-arg NEXT_PUBLIC_EMAILJS_KEY={{secrets.EMAILJS_KEY}} \
-            --build-arg NEXT_PUBLIC_EMAILJS_SERVICE_ID={{secrets.EMAILJS_SERVICE_ID}} \
-            --build-arg NEXT_PUBLIC_EMAILJS_TEMPLATE_ID={{secrets.EMAILJS_TEMPLATE_ID}} \
+            --build-arg NEXT_PUBLIC_EMAILJS_KEY=${{secrets.EMAILJS_KEY}} \
+            --build-arg NEXT_PUBLIC_EMAILJS_SERVICE_ID=${{secrets.EMAILJS_SERVICE_ID}} \
+            --build-arg NEXT_PUBLIC_EMAILJS_TEMPLATE_ID=${{secrets.EMAILJS_TEMPLATE_ID}} \
             --tag ghcr.io/fasonju/portfolio:latest .
           docker push  ghcr.io/fasonju/portfolio:latest
