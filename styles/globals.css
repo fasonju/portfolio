@@ -20,7 +20,7 @@ body {
       @apply bg-EveningBlack/95 rounded-xl hover:bg-gradient-to-br hover:from-Green/10 hover:to-indigo-600/5;
     }
     .button {
-      @apply bg-Green hover:bg-Green/60 transition rounded-xl text-MidNightBlack text-base font-medium  px-8 py-2;
+      @apply bg-Green hover:bg-Green/60 transition rounded-xl text-MidNightBlack text-base font-medium px-8 py-2;
     }
     .input_stylings {
       @apply bg-DeepNightBlack text-SilverGray text-sm rounded-lg outline-none focus:ring-1 focus:ring-Green block w-full pl-10 p-2.5;
@@ -47,39 +47,41 @@ body {
       src: url(/fonts/Circular-Bold.otf);
     }
   }
-  @variants responsive {
-    /* Hide scrollbar for Chrome, Safari and Opera */
+
+  /* Scrollbar base styles */
+  ::-webkit-scrollbar {
+    width: 5px;
+    height: 4px;
+  }
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 10px;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #1fdf64;
+    border-radius: 8px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #1fdf64;
+  }
+
+  /* Hide scrollbar on all screen sizes for .no-scrollbar */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+
+  /* Responsive example: hide scrollbar only on medium screens and above */
+  @media (min-width: 768px) {
     .no-scrollbar::-webkit-scrollbar {
       display: none;
     }
-
-    /* Hide scrollbar for IE, Edge and Firefox */
     .no-scrollbar {
-      -ms-overflow-style: none; /* IE and Edge */
-      scrollbar-width: none; /* Firefox */
-    }
-
-    /* width */
-    ::-webkit-scrollbar {
-      width: 5px;
-      height: 4px;
-    }
-
-    /* Track */
-    ::-webkit-scrollbar-track {
-      box-shadow: inset 0 0 5px grey;
-      border-radius: 10px;
-    }
-
-    /* Handle */
-    ::-webkit-scrollbar-thumb {
-      background: #1fdf64;
-      border-radius: 8px;
-    }
-
-    /* Handle on hover */
-    ::-webkit-scrollbar-thumb:hover {
-      background: #1fdf64;
+      -ms-overflow-style: none;
+      scrollbar-width: none;
     }
   }
 
