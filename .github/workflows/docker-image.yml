@@ -1,9 +1,7 @@
 name: Build and publish a Docker image to ghcr.io
 on:
-  # publish on pushes to the main branch (image tagged as "latest")
-  push:
-    branches:
-      - main
+  release:
+    types: [published]
 
 jobs:
   docker_publish:
