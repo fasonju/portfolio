@@ -1,6 +1,6 @@
 # syntax=docker.io/docker/dockerfile:1
 
-FROM node:18-alpine AS base
+FROM node:24-alpine AS base
 
 LABEL org.opencontainers.image.source="https://github.com/fasonju/portfolio"
 LABEL org.opencontainers.image.description="Production Portfolio webapp using NEXTJS"
