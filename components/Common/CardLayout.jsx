@@ -18,4 +18,3 @@ const CardLayout = ({ children, className = "h-full w-full" }) => {
 };
 
 export default CardLayout;
-

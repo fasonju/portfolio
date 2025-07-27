@@ -1,11 +1,5 @@
 import Link from "next/link";
-import {
-  FaDownload,
-  FaFacebook,
-  FaGithub,
-  FaLinkedin,
-  FaTwitter,
-} from "react-icons/fa";
+import { FaDownload, FaGithub, FaLinkedin } from "react-icons/fa";
 import Contact from "./Contact";
 import Download from "./Download";
 import Languages from "./Languages";

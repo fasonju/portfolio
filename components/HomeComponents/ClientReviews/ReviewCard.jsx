@@ -36,4 +36,3 @@ const ReviewCard = ({ data }) => {
 };
 
 export default ReviewCard;
-

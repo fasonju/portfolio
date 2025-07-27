@@ -12,4 +12,3 @@ const ExpertiseCard = ({ data }) => {
 };
 
 export default ExpertiseCard;
-

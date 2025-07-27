@@ -30,4 +30,3 @@ const RecommendationCard = ({ data }) => {
 };
 
 export default RecommendationCard;
-

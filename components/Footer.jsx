@@ -1,6 +1,6 @@
 import { AiFillCopyrightCircle } from "react-icons/ai";
 import { MdMail } from "react-icons/md";
-import { AiOutlineWhatsApp } from "react-icons/ai";
+import { CONTACTS, SOCIAL_LINKS } from "../constants/constants";
 
 const Footer = () => {
   return (
@@ -13,15 +13,15 @@ const Footer = () => {
           <span>2025 All Rights Reserved.</span>
         </div>
         <div className="flex items-center">
-          <a href="https://github.com/fasonju" target="_blank" rel="noreferrer">
-            Made with ❤️ by <span className="font-bold">Ren</span>
+          <a href={SOCIAL_LINKS.COFFEE} target="_blank" rel="noreferrer">
+            Buy a coffee for me ☕
           </a>
         </div>
         <div className="hidden md:flex items-center">
           <div className="mr-1 text-base">
             <MdMail />
           </div>
-          <div>fu.jason.ren@gmail.com</div>
+          <div>{CONTACTS.EMAIL}</div>
         </div>
       </div>
     </div>
@@ -29,4 +29,3 @@ const Footer = () => {
 };
 
 export default Footer;
-

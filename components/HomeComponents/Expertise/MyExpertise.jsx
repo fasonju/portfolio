@@ -28,4 +28,3 @@ const MyExpertise = () => {
 };
 
 export default MyExpertise;
-

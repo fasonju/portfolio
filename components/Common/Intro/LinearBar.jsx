@@ -18,4 +18,3 @@ const LinearBar = ({ title, percent, bgColor }) => {
 };
 
 export default LinearBar;
-

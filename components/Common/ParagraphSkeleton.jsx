@@ -21,4 +21,3 @@ const ParagraphSkeleton = ({ className }) => {
 };
 
 export default ParagraphSkeleton;
-

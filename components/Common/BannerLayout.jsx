@@ -18,4 +18,3 @@ const BannerLayout = ({ children }) => {
 };
 
 export default BannerLayout;
-

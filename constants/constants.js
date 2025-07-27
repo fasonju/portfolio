@@ -46,6 +46,7 @@ export const SOCIAL_LINKS = {
   GITHUB: "https://github.com/fasonju",
   LINKEDIN: "https://linkedin.com/in/ren-fu",
   X: "https://twitter.com/fason_ju",
+  COFFEE: "https://buymeacoffee.com/fasonju",
 };
 
 export const EMAILJS_PUBLIC_KEY = process.env.NEXT_PUBLIC_EMAILJS_KEY;

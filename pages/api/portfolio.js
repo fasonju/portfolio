@@ -31,16 +31,16 @@ const portfolio = [
     projectDetail: "This website",
     technologiesUsed: [
       {
-        tech: "NextJs"
+        tech: "NextJs",
       },
       {
-        tech: "Docker"
+        tech: "Docker",
       },
       {
-        tech: "TailwindCSS"
-      }
-    ]
-  }
+        tech: "TailwindCSS",
+      },
+    ],
+  },
 ];
 export default function handler(req, res) {
   res.status(200).json(portfolio);

@@ -9,4 +9,3 @@ const Badge = ({ title }) => {
 };
 
 export default Badge;
-

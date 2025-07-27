@@ -27,4 +27,3 @@ const ImageAndParagraphSkeleton = ({ className }) => {
 };
 
 export default ImageAndParagraphSkeleton;
-

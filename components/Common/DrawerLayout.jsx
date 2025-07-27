@@ -29,4 +29,3 @@ const DrawerLayout = ({ setIsOpen, isOpen, children }) => {
 };
 
 export default DrawerLayout;
-
